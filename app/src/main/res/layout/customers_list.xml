@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_bar"
+        android:id="@+id/app_bar"/>
+
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/recyclerView_customer_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        tools:context=".MainActivity"
+        android:layout_marginBottom="50dp"
+        android:padding="@dimen/padding0"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@id/recyclerView_customer_list"
+        android:id="@+id/linear">
+        <Button android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Customer"
+            android:layout_weight="1"
+            android:onClick="onClickAddNewCustomer"
+            android:background="@drawable/sign_up_btn_selector"
+            android:textColor="@android:color/white"/>
+
+        <!-- This is a comment -->
+        <!--
+        <Button android:id="@+id/btn_sing_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_customer"
+            android:background="@drawable/sign_in_btn_selector"
+            android:layout_weight="1"/>
+
+            -->
+
+    </LinearLayout>
+</RelativeLayout>
